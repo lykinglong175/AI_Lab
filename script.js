@@ -148,9 +148,11 @@ function animateCounter(el) {
   let   current  = 0;
 
   const timer = setInterval(() => {
-    current = Math.min(current + step, target);
-    el.textContent = Math.floor(current) + (current >= target ? '+' : '');
-    if (current >= target) clearInterval(timer);
+    current += step;
+    const done = current >= target;
+    if (done) current = target;
+    el.textContent = Math.floor(current) + (done ? '+' : '');
+    if (done) clearInterval(timer);
   }, 16);
 }
 
@@ -225,7 +227,7 @@ form.addEventListener('submit', e => {
   e.preventDefault();
 
   const nameOk  = validateField('name',    'name-error',    v => v.length >= 2,   'Please enter your name.');
-  const emailOk = validateField('email',   'email-error',   v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), 'Please enter a valid email.');
+  const emailOk = validateField('email',   'email-error',   v => /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/.test(v), 'Please enter a valid email.');
   const msgOk   = validateField('message', 'message-error', v => v.length >= 10,  'Message must be at least 10 characters.');
 
   if (nameOk && emailOk && msgOk) {
