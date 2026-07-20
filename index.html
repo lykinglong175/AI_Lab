@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Portfolio | AI Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">&#129302;</span>
+      <span class="brand-text">AI Lab</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="neural-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, World 👋</p>
+      <h1 class="hero-title">
+        I build <span class="gradient-text" id="typed-text"></span>
+        <span class="cursor">|</span>
+      </h1>
+      <p class="hero-subtitle">
+        Exploring the frontier of Artificial Intelligence through research,
+        experimentation, and real-world applications.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am an AI enthusiast and practitioner dedicated to pushing the
+            boundaries of machine learning, deep learning, and intelligent
+            systems. My work spans from classical statistical models to
+            cutting-edge large language models and generative AI.
+          </p>
+          <p>
+            This lab is my personal workspace — a place where ideas are turned
+            into experiments, and experiments into insights.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="20">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-label">Research Areas</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-label">Frameworks</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">profile.py</span>
+            </div>
+            <pre class="code-body"><code><span class="kw">class</span> <span class="cls">AIEngineer</span>:
+    <span class="fn">def</span> <span class="fn">__init__</span>(self):
+        self.name   = <span class="str">"AI Lab"</span>
+        self.focus  = [
+            <span class="str">"Machine Learning"</span>,
+            <span class="str">"Deep Learning"</span>,
+            <span class="str">"NLP &amp; LLMs"</span>,
+            <span class="str">"Computer Vision"</span>,
+        ]
+        self.motto  = <span class="str">"Learn. Build. Iterate."</span>
+
+    <span class="fn">def</span> <span class="fn">work</span>(self):
+        <span class="kw">while</span> <span class="bool">True</span>:
+            self.<span class="fn">experiment</span>()
+            self.<span class="fn">learn</span>()
+            self.<span class="fn">ship</span>()</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Technologies</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3 class="category-title">&#129504; Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">LightGBM</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">SVM</span>
+            <span class="tag">Feature Engineering</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">&#129516; Deep Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Keras</span>
+            <span class="tag">CNNs</span>
+            <span class="tag">RNNs / LSTMs</span>
+            <span class="tag">Transformers</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">&#128483; NLP &amp; LLMs</h3>
+          <div class="skill-tags">
+            <span class="tag">HuggingFace</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">OpenAI API</span>
+            <span class="tag">BERT / GPT</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">&#128247; Computer Vision</h3>
+          <div class="skill-tags">
+            <span class="tag">OpenCV</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">Image Segmentation</span>
+            <span class="tag">Object Detection</span>
+            <span class="tag">GANs</span>
+            <span class="tag">Diffusion Models</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">&#128190; Data &amp; Infra</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title">&#9729;&#65039; MLOps</h3>
+          <div class="skill-tags">
+            <span class="tag">MLflow</span>
+            <span class="tag">Weights &amp; Biases</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Jupyter</span>
+            <span class="tag">Google Colab</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nlp">NLP</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="ml">ML</button>
+        <button class="filter-btn" data-filter="generative">Generative AI</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card" data-category="nlp">
+          <div class="project-icon">&#128483;</div>
+          <div class="project-content">
+            <h3 class="project-title">LLM-Powered Q&amp;A Bot</h3>
+            <p class="project-desc">
+              A retrieval-augmented generation (RAG) chatbot that answers
+              questions over custom documents using OpenAI embeddings and a
+              vector database.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">OpenAI</span>
+              <span class="tech-badge">FAISS</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="cv">
+          <div class="project-icon">&#128247;</div>
+          <div class="project-content">
+            <h3 class="project-title">Real-Time Object Detection</h3>
+            <p class="project-desc">
+              An end-to-end object detection pipeline using YOLOv8 fine-tuned on
+              a custom dataset, deployed as a FastAPI service with live webcam
+              inference.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">YOLOv8</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="generative">
+          <div class="project-icon">&#127912;</div>
+          <div class="project-content">
+            <h3 class="project-title">Image Style Transfer</h3>
+            <p class="project-desc">
+              Neural style transfer model that applies artistic styles to photos
+              using VGG-19 feature maps, with an interactive Gradio UI.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">VGG-19</span>
+              <span class="tech-badge">Gradio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ml">
+          <div class="project-icon">&#128200;</div>
+          <div class="project-content">
+            <h3 class="project-title">Predictive Analytics Dashboard</h3>
+            <p class="project-desc">
+              End-to-end ML pipeline for sales forecasting using gradient
+              boosting, with automated feature selection, hyperparameter tuning,
+              and an interactive Streamlit dashboard.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">XGBoost</span>
+              <span class="tech-badge">Scikit-learn</span>
+              <span class="tech-badge">Pandas</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="nlp">
+          <div class="project-icon">&#128172;</div>
+          <div class="project-content">
+            <h3 class="project-title">Sentiment Analysis API</h3>
+            <p class="project-desc">
+              Fine-tuned BERT model for multi-class sentiment analysis on social
+              media text, wrapped in a production-ready REST API with rate
+              limiting and caching.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">HuggingFace</span>
+              <span class="tech-badge">BERT</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Redis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="generative">
+          <div class="project-icon">&#129520;</div>
+          <div class="project-content">
+            <h3 class="project-title">Text-to-Image Generator</h3>
+            <p class="project-desc">
+              Stable Diffusion-based pipeline with custom LoRA adapters for
+              domain-specific image generation, including a prompt optimization
+              layer powered by GPT-4.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Stable Diffusion</span>
+              <span class="tech-badge">LoRA</span>
+              <span class="tech-badge">Diffusers</span>
+              <span class="tech-badge">GPT-4</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-intro">
+        Interested in collaborating on an AI project, or just want to chat about
+        the latest in machine learning? Feel free to reach out!
+      </p>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message…" required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            Send Message &#9993;
+          </button>
+          <p class="form-success" id="form-success" hidden>
+            &#10003; Thanks! Your message has been sent.
+          </p>
+        </form>
+        <div class="contact-links">
+          <a class="contact-link" href="https://github.com/lykinglong175" target="_blank" rel="noopener noreferrer">
+            <span class="contact-link-icon">&#128279;</span>
+            <span>GitHub</span>
+          </a>
+          <a class="contact-link" href="mailto:contact@ailab.dev">
+            <span class="contact-link-icon">&#128140;</span>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      Built with &#10084;&#65039; &amp; &#129302; &copy; <span id="footer-year"></span> AI Lab
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
